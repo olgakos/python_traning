@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Git-PY.iml" filepath="$PROJECT_DIR$/.idea/Git-PY.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/git-py.iml" filepath="$PROJECT_DIR$/.idea/git-py.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python_traning.iml" filepath="$PROJECT_DIR$/.idea/python_traning.iml" />
     </modules>
   </component>
 </project>
