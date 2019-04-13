@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="">
+    <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="2019-04-13 17-33 лекция 1.16 &quot;Выделение вспомогательных методов и классов&quot;. Тест не проходит, хотя еще недавно все работало (прелыдущий комит после лекции №1.15 - успешный) &#10;Замечания: 1) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, вернула в код (в передыдущем комите с успешно запускающимся тестом, он был удален) из кода. &#10;2) методы &quot;окрыть браузер... залогиниться... создать группу... разлогиниться) записались в странном заотичном порядке, не знаю чем это ыбло вызвано и существенно ли это. Но тест даже с перемешанным поярдком методов запускался успешно.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,21 +14,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="51">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
+                <element signature="e#600#663#0" />
                 <element signature="e#662#744#0" />
+                <element signature="e#1463#1509#0" />
+                <element signature="e#1546#1868#0" />
                 <element signature="e#1759#1834#0" />
+                <element signature="e#2093#2107#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_add_contact.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+              <folding>
+                <element signature="e#24#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,16 +63,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/group.py" />
         <option value="$PROJECT_DIR$/test_add_group.py" />
+        <option value="$PROJECT_DIR$/test_add_contact.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="265" />
+    <option name="x" value="236" />
+    <option name="y" value="32" />
     <option name="width" value="1074" />
-    <option name="height" value="728" />
+    <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -153,28 +182,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555155825113</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2019-04-13 16-30 Лекция 1.15. &quot;Передача параметров в методы&quot;.&#10;Вроде бы успешно. Замечания: 1) после прохождения теста FireFox сам закрывается, кажется раньше такого не было. 2) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, из кода удалила. А то тест проходит с путыми значениями. Но все равно проходит.">
+      <created>1555162560185</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555162560185</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2019-04-13 17-33 лекция 1.16 &quot;Выделение вспомогательных методов и классов&quot;. Тест не проходит, хотя еще недавно все работало (прелыдущий комит после лекции №1.15 - успешный) &#10;Замечания: 1) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, вернула в код (в передыдущем комите с успешно запускающимся тестом, он был удален) из кода. &#10;2) методы &quot;окрыть браузер... залогиниться... создать группу... разлогиниться) записались в странном заотичном порядке, не знаю чем это ыбло вызвано и существенно ли это. Но тест даже с перемешанным поярдком методов запускался успешно.">
+      <created>1555166235496</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555166235496</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.11 at 23h 46m 59s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.11 at 23h 54m 48s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 12h 14m 23s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 12h 15m 46s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 14h 36m 59s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 16h 19m 40s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 16h 21m 41s.xml">
       <configuration name="pytest in test_add_group.py" configurationId="tests" />
     </history-entry>
@@ -187,23 +212,42 @@
     <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 16h 32m 42s.xml">
       <configuration name="pytest in test_add_group.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 15m 51s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 16m 33s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 19m 30s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 30m 42s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 40m 22s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 42m 47s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="265" y="0" width="1074" height="728" extended-state="0" />
+    <frame x="236" y="32" width="1074" height="688" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28796843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7583826" visible="true" weight="0.33781514" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7583826" visible="true" weight="0.36036035" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24161735" side_tool="true" visible="true" weight="0.33781514" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24161735" side_tool="true" visible="true" weight="0.36036035" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -218,7 +262,9 @@
     <MESSAGE value="2019-04-11, 23.50 Успещно запущен первый тест в ПиЧарм." />
     <MESSAGE value="2019-04-13 контрольный комит работающей, не поломанной версии файлов (тест запускается и из консоли, и из среды)." />
     <MESSAGE value="2019-04-13 14-42. Лекция 1.13. Даны имена фрагментам сценария (Рефакторинг - - - Метод). Но выглядят они как-то иначе, расставлены в обратном порядке. Но код запускается." />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-13 14-42. Лекция 1.13. Даны имена фрагментам сценария (Рефакторинг - - - Метод). Но выглядят они как-то иначе, расставлены в обратном порядке. Но код запускается." />
+    <MESSAGE value="2019-04-13 16-30 Лекция 1.15. &quot;Передача параметров в методы&quot;.&#10;Вроде бы успешно. Замечания: 1) после прохождения теста FireFox сам закрывается, кажется раньше такого не было. 2) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, из кода удалила. А то тест проходит с путыми значениями. Но все равно проходит." />
+    <MESSAGE value="2019-04-13 17-33 лекция 1.16 &quot;Выделение вспомогательных методов и классов&quot;. Тест не проходит, хотя еще недавно все работало (прелыдущий комит после лекции №1.15 - успешный) &#10;Замечания: 1) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, вернула в код (в передыдущем комите с успешно запускающимся тестом, он был удален) из кода. &#10;2) методы &quot;окрыть браузер... залогиниться... создать группу... разлогиниться) записались в странном заотичном порядке, не знаю чем это ыбло вызвано и существенно ли это. Но тест даже с перемешанным поярдком методов запускался успешно." />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-13 17-33 лекция 1.16 &quot;Выделение вспомогательных методов и классов&quot;. Тест не проходит, хотя еще недавно все работало (прелыдущий комит после лекции №1.15 - успешный) &#10;Замечания: 1) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, вернула в код (в передыдущем комите с успешно запускающимся тестом, он был удален) из кода. &#10;2) методы &quot;окрыть браузер... залогиниться... создать группу... разлогиниться) записались в странном заотичном порядке, не знаю чем это ыбло вызвано и существенно ли это. Но тест даже с перемешанным поярдком методов запускался успешно." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python_traning/test_add_group.py" />
@@ -246,14 +292,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/_pytest/python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1805">
+          <caret line="510" selection-start-line="510" selection-end-line="510" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="51">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
+            <element signature="e#600#663#0" />
             <element signature="e#662#744#0" />
+            <element signature="e#1463#1509#0" />
+            <element signature="e#1546#1868#0" />
             <element signature="e#1759#1834#0" />
+            <element signature="e#2093#2107#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_add_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
