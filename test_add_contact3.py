@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
+from contact import Contact
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
@@ -14,7 +15,7 @@ class TestAddContact3(unittest.TestCase):
         self.open_home_page(wd)
         self.login(wd, "admin", "secret")
         self.open_contacts_page(wd)
-        self.create_new_contact(wd, "Tom", "Smit", "111-11-11")
+        self.create_new_contact(wd, Contact("Tom", "Smit", "111-11-11"))
         self.return_to_contacts_page(wd)
         self.logout(wd)
 
@@ -26,19 +27,19 @@ class TestAddContact3(unittest.TestCase):
         # return contacts pages
         wd.find_element_by_id("content").click()
 
-    def create_new_contact(self, wd, first_name, second_name, home_phone):
+    def create_new_contact(self, wd, contact):
         # init new contact
         wd.find_element_by_link_text("add new").click()
         # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(first_name)
+        wd.find_element_by_name("firstname").send_keys(contact.first_name)
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(second_name)
+        wd.find_element_by_name("lastname").send_keys(contact.second_name)
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(home_phone)
+        wd.find_element_by_name("home").send_keys(contact.home_phone)
         # submit contact creation
         wd.find_element_by_xpath("//input[21]").click()
 
