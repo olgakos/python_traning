@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -68,7 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
+    <option name="x" value="124" />
+    <option name="y" value="16" />
     <option name="width" value="1143" />
     <option name="height" value="728" />
   </component>
@@ -320,16 +321,17 @@
       <option name="project" value="LOCAL" />
       <updated>1555252229550</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="2019-04-14 20-01  лекц.2_01. &quot;Улучш.читаемости&quot;. Перемещены open_home_page(wd), self.open_groups_page(wd), return_to_groups_page">
+      <created>1555261412385</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1555261412416</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 12m 42s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 14m 52s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 18m 46s.xml">
       <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
     </history-entry>
@@ -354,9 +356,15 @@
     <history-entry file="pytest_in_test_add_group_py - 2019.04.14 at 19h 57m 29s.xml">
       <configuration name="pytest in test_add_group.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.14 at 20h 00m 26s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.14 at 20h 07m 55s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="0" width="1143" height="728" extended-state="0" />
+    <frame x="124" y="16" width="1143" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751616" />
@@ -397,7 +405,8 @@
     <MESSAGE value="2019-04-14 16-42 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены вспомогательные методы. Запускается из среды." />
     <MESSAGE value="2019-04-14 17-02 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены параметры вспомогательных методов. Запускается из среды." />
     <MESSAGE value="2019-04-14 17-27 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены &quot;вспомогательынй класс&quot; для передачи методов.  Запускается из среды." />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-14 17-27 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены &quot;вспомогательынй класс&quot; для передачи методов.  Запускается из среды." />
+    <MESSAGE value="2019-04-14 20-01  лекц.2_01. &quot;Улучш.читаемости&quot;. Перемещены open_home_page(wd), self.open_groups_page(wd), return_to_groups_page" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-14 20-01  лекц.2_01. &quot;Улучш.читаемости&quot;. Перемещены open_home_page(wd), self.open_groups_page(wd), return_to_groups_page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -489,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="170">
+          <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
