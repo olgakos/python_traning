@@ -11,20 +11,25 @@ class TestAddContact3(unittest.TestCase):
 
     def test_add_contact3(self):
         wd = self.wd
-        #open home page
-        wd.get("http://localhost/addressbook/addressbook/")
-        #login
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        #password
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        #enter
-        wd.find_element_by_xpath("//input[@value='Login']").click()
+        self.open_home_page(wd)
+        self.login(wd)
+        self.open_contacts_page(wd)
+        self.create_new_contact(wd)
+        self.return_to_contacts_page(wd)
+        self.logout(wd)
+
+    def logout(self, wd):
+        # logout
+        wd.find_element_by_link_text("Logout").click()
+
+    def return_to_contacts_page(self, wd):
+        # return contacts pages
         wd.find_element_by_id("content").click()
-        #init new contact
+
+    def create_new_contact(self, wd):
+        # init new contact
         wd.find_element_by_link_text("add new").click()
-        #fill contact form
+        # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("Tom")
@@ -34,13 +39,26 @@ class TestAddContact3(unittest.TestCase):
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
         wd.find_element_by_name("home").send_keys("111-11-11")
-        #submit contact creation
+        # submit contact creation
         wd.find_element_by_xpath("//input[21]").click()
-        #return contacts pages
+
+    def open_contacts_page(self, wd):
+        # enter
+        wd.find_element_by_xpath("//input[@value='Login']").click()
         wd.find_element_by_id("content").click()
-        #logout
-        wd.find_element_by_link_text("Logout").click()
-    
+
+    def login(self, wd):
+        # login
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys("admin")
+        # password
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys("secret")
+
+    def open_home_page(self, wd):
+        # open home page
+        wd.get("http://localhost/addressbook/addressbook/")
+
     def is_element_present(self, how, what):
         try: self.wd.find_element(by=how, value=what)
         except NoSuchElementException as e: return False
