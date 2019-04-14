@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_add_contact3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_contact3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="85">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -28,20 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_add_contact3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-              <folding>
-                <element signature="e#24#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -72,17 +60,17 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test_add_contact.py" />
         <option value="$PROJECT_DIR$/group.py" />
-        <option value="$PROJECT_DIR$/test_add_group.py" />
         <option value="$PROJECT_DIR$/test_add_contact2.py" />
         <option value="$PROJECT_DIR$/test_add_contact3.py" />
+        <option value="$PROJECT_DIR$/contact.py" />
+        <option value="$PROJECT_DIR$/test_add_group.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="163" />
     <option name="width" value="1143" />
-    <option name="height" value="680" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -123,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_add_contact3.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
     <configuration name="pytest for test_add_contact.TestAddContact" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_traning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,9 +189,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest in test_add_contact3.py" />
         <item itemvalue="Python tests.pytest in test_add_contact2.py" />
-        <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest for test_add_contact.TestAddContact" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
       </list>
@@ -318,25 +306,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555249386137</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="2019-04-14 17-02 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены параметры вспомогательных методов. Запускается из среды.">
+      <created>1555250586221</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555250586236</updated>
+    </task>
+    <task id="LOCAL-00016" summary="2019-04-14 17-27 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены &quot;вспомогательынй класс&quot; для передачи методов.  Запускается из среды.">
+      <created>1555252229550</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1555252229550</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 15h 43m 32s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 07m 12s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 07m 58s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 09m 22s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 10m 22s.xml">
-      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 12m 42s.xml">
       <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
     </history-entry>
@@ -352,23 +339,39 @@
     <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 39m 40s.xml">
       <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 16h 59m 43s.xml">
+      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 17h 01m 45s.xml">
+      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 17h 15m 30s.xml">
+      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact3_py - 2019.04.14 at 17h 26m 53s.xml">
+      <configuration name="pytest in test_add_contact3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.14 at 19h 57m 29s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="163" y="0" width="1143" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22541603" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.75718606" visible="true" weight="0.2700491" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7571561" visible="true" weight="0.35966387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24281392" side_tool="true" visible="true" weight="0.2700491" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24284396" side_tool="true" visible="true" weight="0.35966387" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -392,7 +395,9 @@
     <MESSAGE value="2019-04-14 15-44 задание №3. Тест &quot;добавить новый контакт&quot; успешно запускается из консоли и из среды." />
     <MESSAGE value="2019-04-14 16-23 задание №3. Тест &quot;добавить новый контакт&quot; размечен комментариями. Запускается из среды." />
     <MESSAGE value="2019-04-14 16-42 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены вспомогательные методы. Запускается из среды." />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-14 16-42 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены вспомогательные методы. Запускается из среды." />
+    <MESSAGE value="2019-04-14 17-02 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены параметры вспомогательных методов. Запускается из среды." />
+    <MESSAGE value="2019-04-14 17-27 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены &quot;вспомогательынй класс&quot; для передачи методов.  Запускается из среды." />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-14 17-27 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены &quot;вспомогательынй класс&quot; для передачи методов.  Запускается из среды." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,16 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_add_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_add_contact2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -468,17 +463,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group.py">
+    <entry file="file://$PROJECT_DIR$/contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state>
+          <caret lean-forward="true" selection-start-line="1" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_add_contact3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+        <state relative-caret-position="276">
+          <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_add_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
