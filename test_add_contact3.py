@@ -12,9 +12,9 @@ class TestAddContact3(unittest.TestCase):
     def test_add_contact3(self):
         wd = self.wd
         self.open_home_page(wd)
-        self.login(wd)
+        self.login(wd, "admin", "secret")
         self.open_contacts_page(wd)
-        self.create_new_contact(wd)
+        self.create_new_contact(wd, "Tom", "Smit", "111-11-11")
         self.return_to_contacts_page(wd)
         self.logout(wd)
 
@@ -26,19 +26,19 @@ class TestAddContact3(unittest.TestCase):
         # return contacts pages
         wd.find_element_by_id("content").click()
 
-    def create_new_contact(self, wd):
+    def create_new_contact(self, wd, first_name, second_name, home_phone):
         # init new contact
         wd.find_element_by_link_text("add new").click()
         # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys("Tom")
+        wd.find_element_by_name("firstname").send_keys(first_name)
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys("Smit")
+        wd.find_element_by_name("lastname").send_keys(second_name)
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys("111-11-11")
+        wd.find_element_by_name("home").send_keys(home_phone)
         # submit contact creation
         wd.find_element_by_xpath("//input[21]").click()
 
@@ -47,13 +47,13 @@ class TestAddContact3(unittest.TestCase):
         wd.find_element_by_xpath("//input[@value='Login']").click()
         wd.find_element_by_id("content").click()
 
-    def login(self, wd):
+    def login(self, wd, username, password):
         # login
         wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
+        wd.find_element_by_name("user").send_keys(username)
         # password
         wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
+        wd.find_element_by_name("pass").send_keys(password)
 
     def open_home_page(self, wd):
         # open home page
