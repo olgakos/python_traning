@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="2019-04-13 21-50 задание№3 test_add_contact2 Файл запускается и проходит шаги, но почему-то в консоли и в среде пишет &quot;провал&quot;. Методы еще не переименованы.">
+    <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-476">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="187">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -37,11 +36,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_add_contact2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="697">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_add_contact3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -70,16 +78,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/test_add_group.py" />
         <option value="$PROJECT_DIR$/test_add_contact.py" />
-        <option value="$PROJECT_DIR$/test_add_contact2.py" />
         <option value="$PROJECT_DIR$/group.py" />
+        <option value="$PROJECT_DIR$/test_add_group.py" />
+        <option value="$PROJECT_DIR$/test_add_contact2.py" />
+        <option value="$PROJECT_DIR$/test_add_contact3.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="228" />
-    <option name="y" value="50" />
+    <option name="x" value="10" />
+    <option name="y" value="68" />
     <option name="width" value="1074" />
     <option name="height" value="626" />
   </component>
@@ -122,7 +131,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_contact2.py">
     <configuration name="pytest for test_add_contact.TestAddContact" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_traning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,8 +194,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest in test_add_contact2.py" />
+        <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest for test_add_contact.TestAddContact" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
       </list>
@@ -266,25 +275,17 @@
       <option name="project" value="LOCAL" />
       <updated>1555181528319</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2019-04-14 14.35 задание№2. Исправлено. Тест(ы) запускается.">
+      <created>1555242381120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555242381120</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 16h 32m 42s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 15m 51s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 16m 33s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 19m 30s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 30m 42s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_add_group_py - 2019.04.13 at 17h 40m 22s.xml">
       <configuration name="pytest in test_add_group.py" configurationId="tests" />
     </history-entry>
@@ -300,9 +301,24 @@
     <history-entry file="pytest_in_test_add_contact2_py - 2019.04.13 at 21h 49m 40s.xml">
       <configuration name="pytest in test_add_contact2.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.14 at 14h 44m 32s.xml">
+      <configuration name="pytest in test_add_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact2_py - 2019.04.14 at 14h 49m 31s.xml">
+      <configuration name="pytest in test_add_contact2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact2_py - 2019.04.14 at 14h 51m 39s.xml">
+      <configuration name="pytest in test_add_contact2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact2_py - 2019.04.14 at 14h 52m 59s.xml">
+      <configuration name="pytest in test_add_contact2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact2_py - 2019.04.14 at 14h 54m 39s.xml">
+      <configuration name="pytest in test_add_contact2.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="345" y="48" width="1074" height="626" extended-state="0" />
+    <frame x="10" y="68" width="1074" height="626" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2938856" />
@@ -310,14 +326,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7583826" weight="0.40567952" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75739646" visible="true" weight="0.27789047" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24161735" side_tool="true" visible="true" weight="0.40567952" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.24260356" side_tool="true" visible="true" weight="0.27789047" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -336,7 +352,8 @@
     <MESSAGE value="2019-04-13 17-33 лекция 1.16 &quot;Выделение вспомогательных методов и классов&quot;. Тест не проходит, хотя еще недавно все работало (прелыдущий комит после лекции №1.15 - успешный) &#10;Замечания: 1) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, вернула в код (в передыдущем комите с успешно запускающимся тестом, он был удален) из кода. &#10;2) методы &quot;окрыть браузер... залогиниться... создать группу... разлогиниться) записались в странном заотичном порядке, не знаю чем это ыбло вызвано и существенно ли это. Но тест даже с перемешанным поярдком методов запускался успешно." />
     <MESSAGE value="2019-04-13 19-20 задание№3 test_add_contact ( создан файл, еще не заупскался)" />
     <MESSAGE value="2019-04-13 21-50 задание№3 test_add_contact2 Файл запускается и проходит шаги, но почему-то в консоли и в среде пишет &quot;провал&quot;. Методы еще не переименованы." />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-13 21-50 задание№3 test_add_contact2 Файл запускается и проходит шаги, но почему-то в консоли и в среде пишет &quot;провал&quot;. Методы еще не переименованы." />
+    <MESSAGE value="2019-04-14 14.35 задание№2. Исправлено. Тест(ы) запускается." />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-14 14.35 задание№2. Исправлено. Тест(ы) запускается." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -392,16 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_add_contact2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -411,11 +418,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_add_contact2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_add_contact3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
