@@ -13,7 +13,7 @@ def app(request):
     request.addfinalizer(fixture.destroy)
     return fixture
 
-#тестовый метод прнимающий в качестве параметра фикстуру и вызывающий в ней вспомогательные методы
+#тестовый метод принимающий в качестве параметра фикстуру и вызывающий в ней вспомогательные методы
 def test_add_group(app):
     app.login(username="admin", password="secret")
     app.create_group(Group(name="1234", header="qwert", footer="zxcvb"))
