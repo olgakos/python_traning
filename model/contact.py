@@ -1,4 +1,5 @@
 
+#это класс Contact из задания №3
 class Contact():
 
     def __init__(self, first_name, second_name, home_phone):
