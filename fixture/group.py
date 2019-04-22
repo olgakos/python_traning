@@ -29,11 +29,12 @@ class GroupHelper:
         self.return_to_groups_page()
 
     def delete_first_group(self):
+        #две строки ниже можно скопировать из пхожих сценариев выше - "открыть стр. с группами"
         wd = self.app.wd
         self.open_groups_page()
         #select first group
         wd.find_element_by_name("selected[]").click()
-        #submit deletion
+        #submit deletion (нажать кнопку, т.е. сделать удаление)= "найти нас стр. элемент по имени delete и кликнуть по нему"
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
 

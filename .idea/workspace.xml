@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="2019-04-22 18.48 Лекц. 2_04 контрольный коммит. Удалила из contact  строчку &quot;self.create_new_contact()&quot; - теперь запускатется test_add_contact">
+    <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,37 +15,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/fixture/group.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="209">
+                    <caret line="27" selection-start-line="27" selection-end-line="28" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
+        <entry file="file://$PROJECT_DIR$/fixture/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conftest.py">
+        <entry file="file://$PROJECT_DIR$/test/test_del_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -80,22 +88,23 @@
         <option value="$PROJECT_DIR$/test_add_contact3.py" />
         <option value="$PROJECT_DIR$/test_add_contact.py" />
         <option value="$PROJECT_DIR$/test/conftest.py" />
-        <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/fixture/session.py" />
-        <option value="$PROJECT_DIR$/fixture/group.py" />
         <option value="$PROJECT_DIR$/test/test_del_group.py" />
-        <option value="$PROJECT_DIR$/fixture/contact.py" />
         <option value="$PROJECT_DIR$/fixture/application.py" />
-        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/test/test_add_contact.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/test/test_del_contact.py" />
+        <option value="$PROJECT_DIR$/fixture/group.py" />
+        <option value="$PROJECT_DIR$/fixture/contact.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="4" />
-    <option name="width" value="1182" />
-    <option name="height" value="725" />
+    <option name="x" value="-1" />
+    <option name="y" value="27" />
+    <option name="width" value="832" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -158,28 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_del_group.py">
-    <configuration name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_traning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixture" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixture/contact.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest in test_del_contact.py">
     <configuration name="pytest in test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_traning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,6 +228,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_del_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_traning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_del_contact.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_del_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_traning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -257,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_del_group.py" />
+        <item itemvalue="Python tests.pytest in test_del_contact.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
-        <item itemvalue="Python tests.pytest in test" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
-        <item itemvalue="Python.contact" />
+        <item itemvalue="Python tests.pytest in test" />
+        <item itemvalue="Python tests.pytest in test_del_group.py" />
       </list>
     </recent_temporary>
   </component>
@@ -493,51 +496,58 @@
       <option name="project" value="LOCAL" />
       <updated>1555948258411</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="2019-04-22 19.18 Лекц. 2_04 Все запускается, но поштучно а не оптом папка test:&#10;&#10;1) &quot;При удалении группы надо вызывать метод delete_first_group().&quot;&#10;- Сделала&#10;&#10;2) &quot;А при создании контакта метод не должен вызывать себя же, это надо исправить: &#10;def create_new_contact(self, contact):&#10;    wd = self.app.wd&#10;self.create_new_contact() &quot;&#10;&#10;- Я не придумала ничего кроме как удалить строку &quot;self.create_new_contact()&quot;&#10;&#10;3) из файла test\test_add_contact удалила дублирующийся (с conftest) кусок:&#10;&#10;#это значок инициализатора фикстуры&#10;@pytest.fixture&#10;def app(request):&#10;    #инициализация создания фикстуры&#10;    fixture = Application()&#10;    #указание как фикстура д.б. разрушена&#10;    request.addfinalizer(fixture.destroy)&#10;    return fixture&#10;&#10;- После этого заработал @pytest.fixture(scope = &quot;session&quot;)&#10;- После этого тесты в папке test запускаются, НО поштучно. При запуске оптом почему-то валится test_add_group и test_delete_first_group. Я добавила время ожидания браузера с 30 сек. до 60 сек. - не помогает.">
+      <created>1555949959226</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1555949959247</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_add_contact_py - 2019.04.22 at 18h 33m 04s.xml">
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 00h 39m 38s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 00h 45m 11s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 00h 51m 13s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 00h 54m 40s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 00h 55m 41s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact_py - 2019.04.23 at 00h 56m 13s.xml">
       <configuration name="pytest in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_add_contact_py - 2019.04.22 at 18h 35m 05s.xml">
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 01h 07m 23s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_del_contact_py - 2019.04.23 at 01h 18m 54s.xml">
+      <configuration name="pytest in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact_py - 2019.04.23 at 01h 21m 32s.xml">
       <configuration name="pytest in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.22 at 18h 36m 19s.xml">
-      <configuration name="pytest in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test - 2019.04.22 at 18h 39m 54s.xml">
-      <configuration name="pytest in test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_del_group_py - 2019.04.22 at 18h 41m 09s.xml">
-      <configuration name="pytest in test_del_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test - 2019.04.22 at 18h 43m 09s.xml">
-      <configuration name="pytest in test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test - 2019.04.22 at 18h 47m 27s.xml">
-      <configuration name="pytest in test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact_py - 2019.04.22 at 19h 06m 48s.xml">
-      <configuration name="pytest in test_add_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test - 2019.04.22 at 19h 10m 26s.xml">
-      <configuration name="pytest in test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_group_py - 2019.04.22 at 19h 15m 55s.xml">
+    <history-entry file="pytest_in_test_add_group_py - 2019.04.23 at 01h 23m 11s.xml">
       <configuration name="pytest in test_add_group.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="4" width="1182" height="725" extended-state="0" />
+    <frame x="-1" y="27" width="832" height="696" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2976827" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25518134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.754159" visible="true" weight="0.4493243" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.754159" visible="true" weight="0.32149202" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -553,12 +563,12 @@
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29667282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19656284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.754159" visible="true" weight="0.410148" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.754159" visible="true" weight="0.32149202" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -575,7 +585,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2019-04-13 17-33 лекция 1.16 &quot;Выделение вспомогательных методов и классов&quot;. Тест не проходит, хотя еще недавно все работало (прелыдущий комит после лекции №1.15 - успешный) &#10;Замечания: 1) &quot;Дубль&quot; теста, с пустыми параметрами как в примере в лекции, вернула в код (в передыдущем комите с успешно запускающимся тестом, он был удален) из кода. &#10;2) методы &quot;окрыть браузер... залогиниться... создать группу... разлогиниться) записались в странном заотичном порядке, не знаю чем это ыбло вызвано и существенно ли это. Но тест даже с перемешанным поярдком методов запускался успешно." />
     <MESSAGE value="2019-04-13 19-20 задание№3 test_add_contact ( создан файл, еще не заупскался)" />
     <MESSAGE value="2019-04-13 21-50 задание№3 test_add_contact2 Файл запускается и проходит шаги, но почему-то в консоли и в среде пишет &quot;провал&quot;. Методы еще не переименованы." />
     <MESSAGE value="2019-04-14 14.35 задание№2. Исправлено. Тест(ы) запускается." />
@@ -600,7 +609,8 @@
     <MESSAGE value="2019-04-22 17.40 Лекц. 2_04 &#10;1) Исправлено:  fixture\group - wd.find_element_by_name(&quot;selected[]&quot;).click()  &#10;2) Испаравлено: test/test_del_group - app.group.delete_first_group()&#10;- Тест delete_first_group - запускается." />
     <MESSAGE value="2019-04-22 18.40 Лекц. 2_04 контрольный коммит. тесты пока запускаются - по отдельности (включая test_add_contact)." />
     <MESSAGE value="2019-04-22 18.48 Лекц. 2_04 контрольный коммит. Удалила из contact  строчку &quot;self.create_new_contact()&quot; - теперь запускатется test_add_contact" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-22 18.48 Лекц. 2_04 контрольный коммит. Удалила из contact  строчку &quot;self.create_new_contact()&quot; - теперь запускатется test_add_contact" />
+    <MESSAGE value="2019-04-22 19.18 Лекц. 2_04 Все запускается, но поштучно а не оптом папка test:&#10;&#10;1) &quot;При удалении группы надо вызывать метод delete_first_group().&quot;&#10;- Сделала&#10;&#10;2) &quot;А при создании контакта метод не должен вызывать себя же, это надо исправить: &#10;def create_new_contact(self, contact):&#10;    wd = self.app.wd&#10;self.create_new_contact() &quot;&#10;&#10;- Я не придумала ничего кроме как удалить строку &quot;self.create_new_contact()&quot;&#10;&#10;3) из файла test\test_add_contact удалила дублирующийся (с conftest) кусок:&#10;&#10;#это значок инициализатора фикстуры&#10;@pytest.fixture&#10;def app(request):&#10;    #инициализация создания фикстуры&#10;    fixture = Application()&#10;    #указание как фикстура д.б. разрушена&#10;    request.addfinalizer(fixture.destroy)&#10;    return fixture&#10;&#10;- После этого заработал @pytest.fixture(scope = &quot;session&quot;)&#10;- После этого тесты в папке test запускаются, НО поштучно. При запуске оптом почему-то валится test_add_group и test_delete_first_group. Я добавила время ожидания браузера с 30 сек. до 60 сек. - не помогает." />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-22 19.18 Лекц. 2_04 Все запускается, но поштучно а не оптом папка test:&#10;&#10;1) &quot;При удалении группы надо вызывать метод delete_first_group().&quot;&#10;- Сделала&#10;&#10;2) &quot;А при создании контакта метод не должен вызывать себя же, это надо исправить: &#10;def create_new_contact(self, contact):&#10;    wd = self.app.wd&#10;self.create_new_contact() &quot;&#10;&#10;- Я не придумала ничего кроме как удалить строку &quot;self.create_new_contact()&quot;&#10;&#10;3) из файла test\test_add_contact удалила дублирующийся (с conftest) кусок:&#10;&#10;#это значок инициализатора фикстуры&#10;@pytest.fixture&#10;def app(request):&#10;    #инициализация создания фикстуры&#10;    fixture = Application()&#10;    #указание как фикстура д.б. разрушена&#10;    request.addfinalizer(fixture.destroy)&#10;    return fixture&#10;&#10;- После этого заработал @pytest.fixture(scope = &quot;session&quot;)&#10;- После этого тесты в папке test запускаются, НО поштучно. При запуске оптом почему-то валится test_add_group и test_delete_first_group. Я добавила время ожидания браузера с 30 сек. до 60 сек. - не помогает." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python_traning/test_add_group.py" />
@@ -640,23 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#95#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -667,36 +660,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_del_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="119">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#95#125#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -704,17 +693,45 @@
     <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="51" lean-forward="true" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_del_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#135#148#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="27" selection-start-line="27" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_del_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
         </state>
       </provider>
     </entry>
