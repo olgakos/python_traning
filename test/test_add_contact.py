@@ -3,14 +3,9 @@ import pytest
 from model.contact import Contact
 from fixture.application import Application
 
+#2019-04-22 19/02 на пробу удалю отсюда кусок до "тестовый метод, принимающий..."
 #это значок инициализатора фикстуры
-@pytest.fixture
-def app(request):
-    #инициализация создания фикстуры
-    fixture = Application()
-    #указание как фикстура д.б. разрушена
-    request.addfinalizer(fixture.destroy)
-    return fixture
+
 
 #тестовый метод принимающий в качестве параметра фикстуру и вызывающий в ней вспомогательные методы
 #указываем, в каком пакете теперь искать про записанные данные констакта.
