@@ -11,7 +11,7 @@ class ContactHelper:
 
     def create_new_contact(self, contact):
         wd = self.app.wd
-        self.create_new_contact()
+        # !удалила из этого места строчку self.create_new_contact() вроде запустилось.
         # init new contact
         wd.find_element_by_link_text("add new").click()
         # fill contact form
