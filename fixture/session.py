@@ -7,7 +7,7 @@ class SessionHelper:
 
     def login(self, username, password):
         wd = self.app.wd
-#поскольку open_home_page теперь в пакете fixture , обращаемся  кнему тоже через app
+#поскольку open_home_page теперь в пакете fixture , обращаемся  кнему тоже через app. См. еще тайминг 7.55 (2_3) иная строка Login
         self.app.open_home_page()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
