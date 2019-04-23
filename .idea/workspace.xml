@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7546bdf-929c-422b-b559-8b3dbc11fc17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="-68">
+              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -28,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/fixture/contact.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-272">
-              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -36,20 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="e#135#148#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_edit_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="119">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -103,8 +98,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="3" />
+    <option name="x" value="71" />
+    <option name="y" value="44" />
     <option name="width" value="1082" />
     <option name="height" value="688" />
   </component>
@@ -260,9 +255,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test_edit_group.py" />
+        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python.group" />
         <item itemvalue="Python tests.pytest in test_edit_contact.py" />
-        <item itemvalue="Python tests.pytest in test_add_contact.py" />
         <item itemvalue="Python tests.pytest in test" />
       </list>
     </recent_temporary>
@@ -523,22 +518,17 @@
       <option name="project" value="LOCAL" />
       <updated>1556029856868</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="2019-04-23 19.38 Задание №7 (fail) test_edit_group + test_edit_contact&#10;&#10;Не запускаются, почему?">
+      <created>1556037619924</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1556037619924</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_edit_contact_py - 2019.04.23 at 18h 51m 20s.xml">
-      <configuration name="pytest in test_edit_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_add_contact_py - 2019.04.23 at 18h 54m 19s.xml">
-      <configuration name="pytest in test_add_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_edit_contact_py - 2019.04.23 at 18h 55m 07s.xml">
-      <configuration name="pytest in test_edit_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_edit_group_py - 2019.04.23 at 19h 02m 33s.xml">
-      <configuration name="pytest in test_edit_group.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_edit_group_py - 2019.04.23 at 19h 04m 35s.xml">
       <configuration name="pytest in test_edit_group.py" configurationId="tests" />
     </history-entry>
@@ -557,9 +547,22 @@
     <history-entry file="pytest_in_test_edit_group_py - 2019.04.23 at 19h 30m 27s.xml">
       <configuration name="pytest in test_edit_group.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_edit_group_py - 2019.04.23 at 19h 37m 49s.xml">
+      <configuration name="pytest in test_edit_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_add_contact_py - 2019.04.23 at 19h 47m 47s.xml">
+      <configuration name="pytest in test_add_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_edit_group_py - 2019.04.23 at 19h 50m 35s.xml">
+      <configuration name="pytest in test_edit_group.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_edit_group_py - 2019.04.23 at 19h 53m 31s.xml">
+      <configuration name="pytest in test_edit_group.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-76" y="9" width="1082" height="688" extended-state="0" />
+    <frame x="71" y="44" width="1082" height="688" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3111546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -604,7 +607,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2019-04-14 15-30 задание №3 комитю заготовку ФАЙЛА РЕКОРДЕРА." />
     <MESSAGE value="2019-04-14 15-44 задание №3. Тест &quot;добавить новый контакт&quot; успешно запускается из консоли и из среды." />
     <MESSAGE value="2019-04-14 16-23 задание №3. Тест &quot;добавить новый контакт&quot; размечен комментариями. Запускается из среды." />
     <MESSAGE value="2019-04-14 16-42 задание №3. Тест &quot;добавить новый контакт&quot; - добавлены вспомогательные методы. Запускается из среды." />
@@ -629,7 +631,8 @@
     <MESSAGE value="2019-04-23 1.26 Задание7. test_del_contact - done" />
     <MESSAGE value="2019-04-24 1.44 Задание №7&#10;- Еще подчистила.&#10;- Пошлучно запускаются: все.&#10;- НО в группе запускаются только:&#10;test_add_contact&#10;test_add_group&#10;&#10;и не запускаются в группе: &#10;test_add_empty_group&#10;test_del_contact&#10;test_del_group" />
     <MESSAGE value="2019-04-23 17.29 Задание №7 (контрольный коммит)&#10;- Можно запустить &quot;оптом&quot; тесты&quot;&#10;test_add_contact&#10;test_add_group&#10;test_add_empty_group&#10;test_del_contact&#10;test_del_group" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-04-23 17.29 Задание №7 (контрольный коммит)&#10;- Можно запустить &quot;оптом&quot; тесты&quot;&#10;test_add_contact&#10;test_add_group&#10;test_add_empty_group&#10;test_del_contact&#10;test_del_group" />
+    <MESSAGE value="2019-04-23 19.38 Задание №7 (fail) test_edit_group + test_edit_contact&#10;&#10;Не запускаются, почему?" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-04-23 19.38 Задание №7 (fail) test_edit_group + test_edit_contact&#10;&#10;Не запускаются, почему?" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/python_traning/test_add_group.py" />
@@ -737,34 +740,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#135#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/contact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-272">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_edit_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fixture/group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="-68">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_edit_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
