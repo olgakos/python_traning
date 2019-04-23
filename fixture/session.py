@@ -20,3 +20,5 @@ class SessionHelper:
         wd = self.app.wd
         # logout
         wd.find_element_by_link_text("Logout").click()
+        #после логаута надо добавить ожидание появления формы логина:
+        wd.find_element_by_name("user")
