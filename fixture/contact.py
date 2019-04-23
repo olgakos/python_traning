@@ -9,11 +9,11 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
 
-    def create_new_contact(self, contact):
+    def create(self, contact):
         wd = self.app.wd
         self.open_home_page()
         # init contact creation
-        #wd.find_element_by_name("add new").click()
+        #внимание, не by_name а by_link
         wd.find_element_by_link_text("add new").click()
         # fill contact form
         wd.find_element_by_name("firstname").click()
@@ -48,7 +48,9 @@ class ContactHelper:
         # две строки ниже можно скопировать из пхожих сценариев выше - "открыть стр. с группами"
         wd = self.app.wd
         self.open_home_page()
-        wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
+        wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
+        #wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
+        wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(contact.first_name)
         wd.find_element_by_name("lastname").click()
@@ -60,7 +62,7 @@ class ContactHelper:
         #self.fill_contact_form(contact)
         # confirm changes
         wd.find_element_by_name("update").click()
-        self.app.return_to_home()
+        self.return_to_home_page()
 
     def return_to_home_page(self):
         wd = self.app.wd
