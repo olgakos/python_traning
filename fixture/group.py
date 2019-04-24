@@ -44,7 +44,7 @@ class GroupHelper:
         #secect first group
         wd.find_element_by_name("selected[]").click()
         #submit edition
-        wd.find_element_by_name("Edit").click()
+        wd.find_element_by_name("edit").click()
         # fill group form
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
@@ -55,8 +55,9 @@ class GroupHelper:
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys(group.footer)
-        #submit group edition
-        wd.find_element_by_name("update").click()
+        # submit group edition
+        #wd.find_element_by_name("update").click()
+        wd.find_element_by_xpath("// input[@ name='update']").click()
         self.return_to_groups_page()
 
     def return_to_groups_page(self):
