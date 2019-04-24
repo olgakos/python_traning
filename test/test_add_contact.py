@@ -13,6 +13,7 @@ from fixture.application import Application
 #указываем, в каком пакете теперь искать про записанные данные констакта.
 #если сломается - попробуй TestAddContact / test_add_contact
 def test_add_contact(app):
-    app.session.login(username="admin", password="secret")
+    #теперь метод ЛОГИН лежит в conftest как фикстура
+    #app.session.login(username="admin", password="secret")
     app.contact.create(Contact(first_name="Tom", second_name="Smit", home_phone="111-11-11"))
-    app.session.logout()
+    #app.session.logout()
