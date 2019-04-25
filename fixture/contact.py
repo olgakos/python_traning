@@ -68,3 +68,11 @@ class ContactHelper:
         wd = self.app.wd
         # return contacts pages
         wd.find_element_by_link_text("home").click()
+
+#лекц3_05
+    def count(self):
+        wd = self.app.wd
+        self.open_home_page()
+        #найти все элементы с selected , взять длину получ.списка и вернуть ее.
+        #-это кол-ко контактов, которые присутст. в адерсной книге
+        return len(wd.find_elements_by_name("selected[]"))
