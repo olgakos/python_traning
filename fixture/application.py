@@ -10,7 +10,8 @@ class Application:
     def __init__(self):
         #self.wd = WebDriver()
         self.wd = webdriver.Firefox()
-        self.wd.implicitly_wait(60)
+        #Unit3_06 строка ниже полезна больше для динамических страниц, время на догрузку
+        #self.wd.implicitly_wait(60)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
