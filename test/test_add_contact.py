@@ -1,19 +1,10 @@
 # -*- coding: utf-8 -*-
-#два импорта "import pytest" и "from fixture.application import Application" стали лишними с созданим Conftest
-import pytest
 from model.contact import Contact
-from fixture.application import Application
 
-#2019-04-22 19/02 на пробу удалю отсюда кусок до "тестовый метод, принимающий..."
-#это значок инициализатора фикстуры
-#тестовый метод принимающий в качестве параметра фикстуру и вызывающий в ней вспомогательные методы.
-# В настоящее время fixture перенесенf в файл Conftest
-
-#тестовый метод принимающий в качестве параметра фикстуру и вызывающий в ней вспомогательные методы
-#указываем, в каком пакете теперь искать про записанные данные констакта.
-#если сломается - попробуй TestAddContact / test_add_contact
 def test_add_contact(app):
-    #теперь метод ЛОГИН лежит в conftest как фикстура
-    #app.session.login(username="admin", password="secret")
+    #unit4_09
+    old_contacts = app.contact.get_contact_list()
     app.contact.create(Contact(first_name="Tom", second_name="Smit", home_phone="111-11-11"))
-    #app.session.logout()
+    #unit4_09
+    new_contacts = app.contact.get_contact_list()
+    assert len(old_contacts) + 1 == len(new_contacts)

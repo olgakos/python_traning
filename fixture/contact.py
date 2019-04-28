@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from model.contact import Contact
+
 class ContactHelper:
 
     def __init__(self, app):
@@ -76,3 +78,15 @@ class ContactHelper:
         #найти все элементы с selected , взять длину получ.списка и вернуть ее.
         #-это кол-ко контактов, которые присутст. в адерсной книге
         return len(wd.find_elements_by_name("selected[]"))
+
+
+#unit4_09+
+ def get_contact_list(self):
+        wd = self.app.wd
+        self.open_contacts_page()
+        contacts = []
+        for element in wd.find_elements_by_name("entry"):
+            text = element.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            contacts.append(Contact(name=text, id=id))
+        return contacts
