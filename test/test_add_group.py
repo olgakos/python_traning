@@ -23,5 +23,5 @@ def test_add_empty_group(app):
     #unit4_09
     new_groups = app.group.get_group_list()
     #"длина старого списка групп +1 равна длине нового списка груп"
-    assert  len(old_groups) + 1 == len(new_groups)
+    assert len(old_groups) + 1 == len(new_groups)
     #app.session.logout()
