@@ -2,9 +2,9 @@
 #это класс Contact из задания №3
 class Contact():
 
-  def __init__(self, first_name="None", second_name="None", home_phone="None", id="None", name="None"):
-        self.firstname = first_name
-        self.lastname = second_name
-        self.home = home_phone
+  def __init__(self, firstname="None", lastname="None", home="None", id="None", name="None"):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.home = home
         self.id = id
         self.name = name

@@ -20,13 +20,13 @@ class ContactHelper:
         # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.first_name)
+        wd.find_element_by_name("firstname").send_keys(contact.firstname)
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.second_name)
+        wd.find_element_by_name("lastname").send_keys(contact.lastname)
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(contact.home_phone)
+        wd.find_element_by_name("home").send_keys(contact.home)
         # submit contact creation
         #wd.find_element_by_xpath("//input[21]").click()
         wd.find_element_by_name("submit").click()
@@ -54,13 +54,13 @@ class ContactHelper:
         #wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.first_name)
+        wd.find_element_by_name("firstname").send_keys(contact.firstname)
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.second_name)
+        wd.find_element_by_name("lastname").send_keys(contact.lastname)
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(contact.home_phone)
+        wd.find_element_by_name("home").send_keys(contact.home)
         #self.fill_contact_form(contact)
         # confirm changes
         wd.find_element_by_name("update").click()
@@ -81,11 +81,11 @@ class ContactHelper:
 
 
 #unit4_09+
- def get_contact_list(self):
+    def get_contact_list(self):
         wd = self.app.wd
         self.open_home_page()
         contacts = []
-        for element in wd.find_elements_by_name("span.entry"):
+        for element in wd.find_elements_by_name("entry"):
             text = element.text
             id = element.find_element_by_name("selected[]").get_attribute("value")
             contacts.append(Contact(name=text, id=id))
