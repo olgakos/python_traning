@@ -48,6 +48,7 @@ class ContactHelper:
         # закрытие диалогового окна, в котором пользователь подтверждает удаление контакта
         #wd.find_element_by_link_text("home").click()
         self.return_to_home_page()
+        wd.implicitly_wait(2)
 
     def edit_first_contact(self, contact):
         # две строки ниже можно скопировать из пхожих сценариев выше - "открыть стр. с группами"
