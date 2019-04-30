@@ -7,9 +7,12 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
+
+#unit3_06 Если выполняется условие что мы УЖЕ на стр.контакты, и кол-во записей "фамилия" >0, то делать переход на стр контакты не нужно
     def open_home_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_link_text("Last name")) > 0):
+           wd.find_element_by_link_text("home").click()
 
     def create(self, contact):
         wd = self.app.wd
