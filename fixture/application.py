@@ -15,6 +15,7 @@ class Application:
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
+        #self.change_field_value = ContactHelper(self)
 
     def is_valid(self):
         try:

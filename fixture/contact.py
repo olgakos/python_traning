@@ -14,6 +14,14 @@ class ContactHelper:
         if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_link_text("Last name")) > 0):
            wd.find_element_by_link_text("home").click()
 
+    def fill_contact_form(self, contact):
+        # fill new contact
+        self.change_field_value("firstname", contact.firstname)
+        self.change_field_value("middlename", contact.middlename)
+        self.change_field_value("lastname", contact.lastname)
+        self.change_field_value("home", contact.home)
+
+
     def create(self, contact):
         wd = self.app.wd
         self.open_home_page()
@@ -21,15 +29,7 @@ class ContactHelper:
         #внимание, не by_name а by_link
         wd.find_element_by_link_text("add new").click()
         # fill contact form
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.firstname)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.lastname)
-        wd.find_element_by_name("home").click()
-        wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(contact.home)
+        self.fill_contact_form(contact)
         # submit contact creation
         #wd.find_element_by_xpath("//input[21]").click()
         wd.find_element_by_name("submit").click()
@@ -56,16 +56,8 @@ class ContactHelper:
         self.open_home_page()
         wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
         #wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.firstname)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.lastname)
-        wd.find_element_by_name("home").click()
-        wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(contact.home)
-        #self.fill_contact_form(contact)
+        self.fill_contact_form(contact)
+        #????? self.fill_contact_form(new.)
         # confirm changes
         wd.find_element_by_name("update").click()
         self.return_to_home_page()
@@ -94,3 +86,5 @@ class ContactHelper:
             id = element.find_element_by_name("selected[]").get_attribute("value")
             contacts.append(Contact(name=text, id=id))
         return contacts
+
+
