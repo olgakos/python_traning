@@ -17,16 +17,27 @@ class ContactHelper:
     def fill_contact_form(self, contact):
         # fill new contact
         self.change_field_value("firstname", contact.firstname)
-        self.change_field_value("middlename", contact.middlename)
+        #self.change_field_value("middlename", contact.middlename)
         self.change_field_value("lastname", contact.lastname)
         self.change_field_value("home", contact.home)
 
+    def change_select_field_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            Select(wd.find_element_by_name(field_name)).select_by_visible_text(text)
+
+    def change_field_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
 
     def create(self, contact):
         wd = self.app.wd
         self.open_home_page()
-        # init contact creation
-        #внимание, не by_name а by_link
+        # init contact creation (внимание, не by_name а by_link)
         wd.find_element_by_link_text("add new").click()
         # fill contact form
         self.fill_contact_form(contact)
