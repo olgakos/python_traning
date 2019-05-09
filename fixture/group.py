@@ -12,7 +12,7 @@ class GroupHelper:
         if not (wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new")) > 0):
            wd.find_element_by_link_text("groups").click()
 
-    def create_group(self, group):
+    def create(self, group):
         wd = self.app.wd
         self.open_groups_page()
         # init group creation
@@ -22,6 +22,8 @@ class GroupHelper:
         # Submit group creation
         wd.find_element_by_name("submit").click()
         self.return_to_groups_page()
+        #unit 4_10
+        self.group_cache = None
 
     def select_first_group(self):
         #!!! след.строку удалить?? есть в лекц 3_05 (UPD строка нужна, иначе падает)
@@ -40,10 +42,10 @@ class GroupHelper:
         #submit modification
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
+        # unit 4_10
+        self.group_cache = None
 
     def fill_group_form(self, group):
-        #!!!! нужна след. строка или нет??
-        #wd = self.app.wd
         self.change_field_value("group_name", group.name)
         self.change_field_value("group_header", group.header)
         self.change_field_value("group_footer", group.footer)
@@ -51,9 +53,9 @@ class GroupHelper:
     def change_field_value(self, field_name, text):
        wd = self.app.wd
        if text is not None:
-         wd.find_element_by_name(field_name).click()
-         wd.find_element_by_name(field_name).clear()
-         wd.find_element_by_name(field_name).send_keys(text)
+           wd.find_element_by_name(field_name).click()
+           wd.find_element_by_name(field_name).clear()
+           wd.find_element_by_name(field_name).send_keys(text)
 
     def delete_first_group(self):
         wd = self.app.wd
@@ -63,27 +65,30 @@ class GroupHelper:
         wd.find_element_by_name("delete").click()
         #затем обращение к методу "return_to_groups_page" чтобы перейти на стр групп
         self.return_to_groups_page()
+        # unit 4_10
+        self.group_cache = None
 
     #это "вспомогательный метод" edit_first_group
     def edit_first_group(self, group):
         wd = self.app.wd
         self.open_groups_page()
+        # + u4_10
+        self.select_first_group()
         #select first group
         wd.find_element_by_name("selected[]").click()
         #submit edition
         wd.find_element_by_name("edit").click()
-        # fill group form (это блок кода, заполняющий ФОРМУ из трех полей name+header+footer)
-        #-этот блок можно первратить во вспомю.метод для повторн. использования
-        #-refactor-ectract-metod (+"group")=
+        # fill group form
         self.fill_group_form(group)
         # submit group edition/update
         #wd.find_element_by_name("update").click()
         wd.find_element_by_xpath("// input[@ name='update']").click()
         self.return_to_groups_page()
+        #unit 4_10
+        self.group_cache = None
 
     def return_to_groups_page(self):
         wd = self.app.wd
-        # return to groups page
         wd.find_element_by_link_text("group page").click()
 
 #лекц3_05
@@ -94,14 +99,18 @@ class GroupHelper:
         #-это кол-ко групп, которые присутст. в адерсной книге
         return len(wd.find_elements_by_name("selected[]"))
 
+    #unit4_10
+    group_cache = None
 
     #unit4_09 добавляем метод
+    #unit4_10 cache
     def get_group_list(self):
-        wd = self.app.wd
-        self.open_groups_page()
-        groups = []
-        for element in wd.find_elements_by_css_selector("span.group"):
-            text = element.text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            groups.append(Group(name=text, id=id))
-        return groups
+        if self.group_cache is None:
+           wd = self.app.wd
+           self.open_groups_page()
+           self.group_cache = []
+           for element in wd.find_elements_by_css_selector("span.group"):
+               text = element.text
+               id = element.find_element_by_name("selected[]").get_attribute("value")
+               self.group_cache.append(Group(name=text, id=id))
+        return list(self.group_cache)
