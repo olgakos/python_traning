@@ -12,6 +12,7 @@ class GroupHelper:
         if not (wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new")) > 0):
            wd.find_element_by_link_text("groups").click()
 
+
     def create(self, group):
         wd = self.app.wd
         self.open_groups_page()
@@ -25,20 +26,73 @@ class GroupHelper:
         #unit 4_10
         self.group_cache = None
 
+        # unit4_11 это запасной "удалить первую группу при нулевом индексе"
+    def delete_first_group(self):
+        self.delete_group_by_index(0)
 
-    def modify_first_group(self, new_group_date):
+        # unit4_11
+    def delete_group_by_index(self, index):
         wd = self.app.wd
         self.open_groups_page()
-        self.select_first_group()
-        #open modification form
+        self.select_group_by_index(index)
+        wd.find_element_by_name("delete").click()
+        self.return_to_groups_page()
+        # unit 4_10
+        self.group_cache = None
+
+        # def delete_first_group(self):
+        # wd = self.app.wd
+        # self.open_groups_page()
+        # self.select_first_group()
+        ##submit deletion (выполнить клик по элементу кнопка) delete и кликнуть по нему"
+        # wd.find_element_by_name("delete").click()
+        ##затем обращение к методу "return_to_groups_page" чтобы перейти на стр групп
+        # self.return_to_groups_page()
+        ## unit 4_10
+        # self.group_cache = None
+
+    def select_first_group(self):
+        wd = self.app.wd
+        wd.find_element_by_name("selected[]").click()
+
+        # unit 4_11
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+#unit4_11 это запасной "изменить первую группу при нулевом индексе"
+    def modify_first_group(self):
+        self.modify_group_by_index(0)
+
+    def modify_group_by_index(self, index, new_group_data):
+        wd = self.app.wd
+        self.open_groups_page()
+        self.select_group_by_index(index)
+        #open modification form / submit edit
         wd.find_element_by_name("edit").click()
         #fill group form
-        self.fill_group_form(new_group_date)
+        self.fill_group_form(new_group_data)
         #submit modification
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
         # unit 4_10
         self.group_cache = None
+
+
+        #unit4_11
+        #def modify_first_group(self, new_group_datE):
+            #wd = self.app.wd
+            #self.open_groups_page()
+            #self.select_first_group()
+            # open modification form
+            #wd.find_element_by_name("edit").click()
+            # fill group form
+            #self.fill_group_form(new_group_datE)
+            # submit modification
+            #wd.find_element_by_name("update").click()
+            #self.return_to_groups_page()
+            # unit 4_10
+            #self.group_cache = None
 
     def fill_group_form(self, group):
         self.change_field_value("group_name", group.name)
@@ -52,60 +106,23 @@ class GroupHelper:
            wd.find_element_by_name(field_name).clear()
            wd.find_element_by_name(field_name).send_keys(text)
 
-    def select_first_group(self):
-        # !!! след.строку удалить?? есть в лекц 3_05 (UPD строка нужна, иначе падает)
-        wd = self.app.wd
-        # select first group (выполнить клик по элементу/чекбоксу)
-        wd.find_element_by_name("selected[]").click()
-
-        # unit 4_11
-    def select_group_by_index(self, index):
-        wd = self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
-
-    def delete_first_group(self):
-        self.delete_group_by_index(0)
-
-#unit4_11
-    def delete_group_by_index(self, index):
-        wd = self.app.wd
-        self.open_groups_page()
-        self.select_group_by_index(index)
-        wd.find_element_by_name("delete").click()
-        self.return_to_groups_page()
-        # unit 4_10
-        self.group_cache = None
-
-
-    #def delete_first_group(self):
+    #это "вспомогательный метод" edit_first_group
+    #def edit_first_group(self, group):
         #wd = self.app.wd
         #self.open_groups_page()
         #self.select_first_group()
-        ##submit deletion (выполнить клик по элементу кнопка) delete и кликнуть по нему"
-        #wd.find_element_by_name("delete").click()
-        ##затем обращение к методу "return_to_groups_page" чтобы перейти на стр групп
-        #self.return_to_groups_page()
-        ## unit 4_10
-        #self.group_cache = None
-
-    #это "вспомогательный метод" edit_first_group
-    def edit_first_group(self, group):
-        wd = self.app.wd
-        self.open_groups_page()
-        # + u4_10
-        self.select_first_group()
         #select first group
-        wd.find_element_by_name("selected[]").click()
+        #.find_element_by_name("selected[]").click()
         #submit edition
-        wd.find_element_by_name("edit").click()
+        #wd.find_element_by_name("edit").click()
         # fill group form
-        self.fill_group_form(group)
+        #self.fill_group_form(group)
         # submit group edition/update
-        #wd.find_element_by_name("update").click()
-        wd.find_element_by_xpath("// input[@ name='update']").click()
-        self.return_to_groups_page()
+        ##wd.find_element_by_name("update").click()
+        #wd.find_element_by_xpath("// input[@ name='update']").click()
+        #.return_to_groups_page()
         #unit 4_10
-        self.group_cache = None
+        #self.group_cache = None
 
     def return_to_groups_page(self):
         wd = self.app.wd
