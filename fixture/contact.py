@@ -47,18 +47,32 @@ class ContactHelper:
         self.return_to_home_page()
         self.contact_cache = None
 
-    def edit_first_contact(self, contact):
-        # две строки ниже можно скопировать из пхожих сценариев выше - "открыть стр. с группами"
+    def edit_contact_by_index(self, index, new_contact_data)
         wd = self.app.wd
         self.open_home_page()
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
         # wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
-        self.fill_contact_form(contact)
-        # ????? self.fill_contact_form(new.)
+        self.fill_contact_form(new_contact_data)
         # confirm changes
         wd.find_element_by_name("update").click()
         self.return_to_home_page()
         self.contact_cache = None
+
+#Ранее было так:
+    #def edit_first_contact(self, contact):
+        # две строки ниже можно скопировать из пхожих сценариев выше - "открыть стр. с группами"
+        #wd = self.app.wd
+        #self.open_home_page()
+        #wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
+        #self.fill_contact_form(contact)
+        # confirm changes
+        #wd.find_element_by_name("update").click()
+        #self.return_to_home_page()
+        #self.contact_cache = None
+
+    def edit_first_contact(self, new_contact_data):
+        self.edit_contact_by_index(0, new_contact_data)
 
 #задание 7-1
     def delete_first_contact(self):
@@ -78,7 +92,10 @@ class ContactHelper:
         wd.implicitly_wait(2)
         self.contact_cache = None
 
-#TIME!!!! 12
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()

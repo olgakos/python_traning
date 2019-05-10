@@ -32,7 +32,7 @@ def test_modify_some_group_name(app):
 
 def test_modify_group_name(app):
     if app.group.count() == 0:
-        app.group.create(Group(name="test"))
+          app.group.create(Group(name="test"))
     old_groups = app.group.get_group_list()
     group = Group(name="New group name")
     group.id = old_groups[0].id
