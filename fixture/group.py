@@ -25,11 +25,6 @@ class GroupHelper:
         #unit 4_10
         self.group_cache = None
 
-    def select_first_group(self):
-        #!!! след.строку удалить?? есть в лекц 3_05 (UPD строка нужна, иначе падает)
-        wd = self.app.wd
-        # select first group (выполнить клик по элементу/чекбоксу)
-        wd.find_element_by_name("selected[]").click()
 
     def modify_first_group(self, new_group_date):
         wd = self.app.wd
@@ -57,16 +52,41 @@ class GroupHelper:
            wd.find_element_by_name(field_name).clear()
            wd.find_element_by_name(field_name).send_keys(text)
 
+    def select_first_group(self):
+        # !!! след.строку удалить?? есть в лекц 3_05 (UPD строка нужна, иначе падает)
+        wd = self.app.wd
+        # select first group (выполнить клик по элементу/чекбоксу)
+        wd.find_element_by_name("selected[]").click()
+
+        # unit 4_11
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
     def delete_first_group(self):
+        self.delete_group_by_index(0)
+
+#unit4_11
+    def delete_group_by_index(self, index):
         wd = self.app.wd
         self.open_groups_page()
-        self.select_first_group()
-        #submit deletion (выполнить клик по элементу кнопка) delete и кликнуть по нему"
+        self.select_group_by_index(index)
         wd.find_element_by_name("delete").click()
-        #затем обращение к методу "return_to_groups_page" чтобы перейти на стр групп
         self.return_to_groups_page()
         # unit 4_10
         self.group_cache = None
+
+
+    #def delete_first_group(self):
+        #wd = self.app.wd
+        #self.open_groups_page()
+        #self.select_first_group()
+        ##submit deletion (выполнить клик по элементу кнопка) delete и кликнуть по нему"
+        #wd.find_element_by_name("delete").click()
+        ##затем обращение к методу "return_to_groups_page" чтобы перейти на стр групп
+        #self.return_to_groups_page()
+        ## unit 4_10
+        #self.group_cache = None
 
     #это "вспомогательный метод" edit_first_group
     def edit_first_group(self, group):
