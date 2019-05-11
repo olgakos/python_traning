@@ -17,9 +17,6 @@ def test_edit_some_contact_name(app):
     #assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
 
-
-
-
 def test_edit_first_contact(app):
     # Unit3_05
     if app.contact.count() == 0:

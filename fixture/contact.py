@@ -47,7 +47,7 @@ class ContactHelper:
         self.return_to_home_page()
         self.contact_cache = None
 
-    def edit_contact_by_index(self, index, new_contact_data)
+    def edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.open_home_page()
         self.select_contact_by_index(index)
