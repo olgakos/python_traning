@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from model.contact import Contact
 
 class ContactHelper:
@@ -74,27 +73,46 @@ class ContactHelper:
     def edit_first_contact(self, new_contact_data):
         self.edit_contact_by_index(0, new_contact_data)
 
-#задание 7-1
-    def delete_first_contact(self):
-        # две строки ниже можно скопировать из пхожих сценариев выше - "открыть стр. с группами"
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
-        self.open_home_page()
-        #select first contact
-        wd.find_element_by_name("selected[]").click()
+        self.open_contacts_page()
+        self.select_contact_by_index(index)
+        # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
-        #wd.find_element_by_name("delete").click()
         wd.switch_to_alert().accept()
-        # закрытие диалогового окна, в котором пользователь подтверждает удаление контакта
-        # time 12~~~
+        # return to page contacts
         wd.find_element_by_link_text("home").click()
-        #time 12^^^
-        #self.return_to_home_page()
         wd.implicitly_wait(2)
         self.contact_cache = None
 
+
+#задание 7-1
+    #def delete_first_contact(self):
+        #wd = self.app.wd
+        #self.open_home_page()
+        #select first contact
+        #wd.find_element_by_name("selected[]").click()
+        #wd.find_element_by_xpath("//input[@value='Delete']").click()
+        ##wd.find_element_by_name("delete").click()
+        #wd.switch_to_alert().accept()
+        # закрытие диалогового окна, в котором пользователь подтверждает удаление контакта
+        #wd.find_element_by_link_text("home").click()
+        #self.return_to_home_page()
+        #wd.implicitly_wait(2)
+        #self.contact_cache = None
+
+
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+#!!! 13
     def select_contact_by_index(self, index):
         wd = self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
+        #wd.find_elements_by_name("selected[]")[index].click()
+        if index == 1:
+            wd.find_element_by_xpath("//td/input").click()
+        else:
+            wd.find_element_by_xpath("//tr[" + str(index + 2) + "]/td/input").click()
+
 
     def select_first_contact(self):
         wd = self.app.wd
