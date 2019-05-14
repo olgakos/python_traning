@@ -79,14 +79,18 @@ class ContactHelper:
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
+        # ожидание+ 2
+        wd.implicitly_wait(2)
         self.open_home_page()
         self.select_contact_by_index(index)
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+        #ожидание+
+        wd.find_element_by_css_selector("div.msgbox")
         # return to page contacts
         wd.find_element_by_link_text("home").click()
-        wd.implicitly_wait(2)
+
         self.contact_cache = None
 
 
