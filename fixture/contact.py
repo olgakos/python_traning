@@ -33,6 +33,7 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
+#-------------------------------------------------------
     def create(self, contact):
         wd = self.app.wd
         self.open_home_page()
@@ -46,12 +47,14 @@ class ContactHelper:
         self.return_to_home_page()
         self.contact_cache = None
 
+#------------------------------------------------------
     def edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.open_home_page()
         self.select_contact_by_index(index)
         wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
         # wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
+        ##wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         self.fill_contact_form(new_contact_data)
         # confirm changes
         wd.find_element_by_name("update").click()
@@ -72,10 +75,11 @@ class ContactHelper:
 
     def edit_first_contact(self, new_contact_data):
         self.edit_contact_by_index(0, new_contact_data)
+#--------------------------------------------------------------
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
-        self.open_contacts_page()
+        self.open_home_page()
         self.select_contact_by_index(index)
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
@@ -104,24 +108,35 @@ class ContactHelper:
 
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
+
+
+#----------------------------------------------------
+
 #!!! 13
     def select_contact_by_index(self, index):
         wd = self.app.wd
-        #wd.find_elements_by_name("selected[]")[index].click()
-        if index == 1:
-            wd.find_element_by_xpath("//td/input").click()
-        else:
-            wd.find_element_by_xpath("//tr[" + str(index + 2) + "]/td/input").click()
+        wd.find_elements_by_name("selected[]")[index].click()
+        #if index == 1:
+            #wd.find_element_by_xpath("//td/input").click()
+        #else:
+            #wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
 
 
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
 
+#--------------------------------------------------------
+
     def return_to_home_page(self):
         wd = self.app.wd
         # return contacts pages
         wd.find_element_by_link_text("home").click()
+
+    # 14!!
+    # def return_to_list_contacts_page(self):
+    # wd = self.app.wd
+    # wd.find_element_by_link_text("home page").click()
 
 #лекц3_05
     def count(self):
@@ -130,7 +145,6 @@ class ContactHelper:
         #найти все элементы с selected , взять длину получ.списка и вернуть ее.
         #-это кол-ко контактов, которые присутст. в адерсной книге
         return len(wd.find_elements_by_name("selected[]"))
-
 
 #Unit 4_10
     contact_cache = None

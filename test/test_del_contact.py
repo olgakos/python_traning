@@ -1,14 +1,29 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
+from random import randrange
 
-#задание 7-1
-def test_delete_first_contact(app):
-    old_contacts = app.contact.get_contact_list()
-#unit 3_05
+#Unit4_11
+def test_delete_some_contact(app):
     if app.contact.count() == 0:
         app.contact.create(Contact(firstname="timing contact"))
-    app.contact.delete_first_contact()
-    #Unit4_10
+    old_contacts = app.contact.get_contact_list()
+    index = randrange(len(old_contacts))
+    app.contact.delete_contact_by_index(index)
     assert len(old_contacts) - 1 == app.contact.count()
     new_contacts = app.contact.get_contact_list()
+    old_contacts[index:index+1] = []
+    assert old_contacts == new_contacts
 
+#задание 7-1
+#def test_delete_first_contact(app):
+    #if app.contact.count() == 0:
+        #app.contact.create(Contact(firstname="timing contact"))
+    # unit 3_05
+    #old_contacts = app.contact.get_contact_list()
+    #app.contact.delete_first_contact()
+    #Unit4_10
+    #assert len(old_contacts) - 1 == app.contact.count()
+    #new_contacts = app.contact.get_contact_list()
+    #old_contacts[0:1] = []
+    ##old_contacts[index:index+1] = []
+    #assert old_contacts == new_contacts
