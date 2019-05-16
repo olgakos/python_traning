@@ -7,7 +7,7 @@ class ContactHelper:
         self.app = app
 
 
-##-----------------------------------------------------
+#-----------------------------------------------------
     # unit3_06 Если выполняется условие что мы УЖЕ на стр.контакты, и кол-во записей "фамилия" >0, то делать переход на стр контакты не нужно
     def open_home_page(self):
         wd = self.app.wd
@@ -87,7 +87,9 @@ class ContactHelper:
         #self.contact_cache = None
 
     def edit_first_contact(self, new_contact_data):
+        #self.edit_contact_by_index(0)
         self.edit_contact_by_index(0, new_contact_data)
+##
 
 #15
     def edit_contact_by_id(self, id, new_contact_data):
@@ -164,20 +166,21 @@ class ContactHelper:
 #!!! 13
     def select_contact_by_index(self, index):
         wd = self.app.wd
-        #wd.find_elements_by_name("selected[]")[index].click()
-        if index == 1:
-            wd.find_element_by_xpath("//td/input").click()
-        else:
-            wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
+        wd.find_elements_by_name("selected[]")[index].click()
+        #16if index == 1:
+            #16wd.find_element_by_xpath("//td/input").click()
+        #16else:
+            #16wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
 
 #15
     def select_contact_by_id(self, id):
         wd = self.app.wd
         wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
-    def select_first_contact(self):
-        wd = self.app.wd
-        wd.find_element_by_name("selected[]").click()
+#utit13
+    #def select_first_contact(self):
+        #wd = self.app.wd
+        #wd.find_element_by_name("selected[]").click()
 
 #--------------------------------------------------------
 
@@ -210,10 +213,10 @@ class ContactHelper:
           self.contact_cache = []
           for element in wd.find_elements_by_name("entry"):
               text = element.text
-              #first_name = element.find_elements_by_xpath("td")[2].text
-              #last_name = element.find_elements_by_xpath("td")[1].text
-              first_name = element.find_element_by_name("selected[]").get_attribute("title"[0])
-              last_name = element.find_element_by_name("selected[]").get_attribute("title"[1])
+              first_name = element.find_elements_by_xpath("td")[2].text
+              last_name = element.find_elements_by_xpath("td")[1].text
+              #first_name = element.find_element_by_name("selected[]").get_attribute("title"[0])
+              #last_name = element.find_element_by_name("selected[]").get_attribute("title"[1])
               id = element.find_element_by_name("selected[]").get_attribute("value")
               self.contact_cache.append(Contact(firstname=first_name, lastname=last_name, id=id))
         return list(self.contact_cache)
