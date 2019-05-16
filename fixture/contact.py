@@ -7,11 +7,14 @@ class ContactHelper:
         self.app = app
 
 
-#unit3_06 Если выполняется условие что мы УЖЕ на стр.контакты, и кол-во записей "фамилия" >0, то делать переход на стр контакты не нужно
+##-----------------------------------------------------
+    # unit3_06 Если выполняется условие что мы УЖЕ на стр.контакты, и кол-во записей "фамилия" >0, то делать переход на стр контакты не нужно
     def open_home_page(self):
         wd = self.app.wd
         if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_link_text("Last name")) > 0):
              wd.find_element_by_link_text("home").click()
+
+# -----------------------------------------------------
 
     def fill_contact_form(self, contact):
         # fill new contact
@@ -26,6 +29,7 @@ class ContactHelper:
             wd.find_element_by_name(field_name).click()
             Select(wd.find_element_by_name(field_name)).select_by_visible_text(text)
 
+
     def change_field_value(self, field_name, text):
         wd = self.app.wd
         if text is not None:
@@ -33,7 +37,7 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-#-------------------------------------------------------
+#-----------------------------------------------------
     def create(self, contact):
         wd = self.app.wd
         self.open_home_page()
@@ -47,6 +51,15 @@ class ContactHelper:
         self.return_to_home_page()
         self.contact_cache = None
 
+#15
+    def add_contact_in_group(self, contact_id, group_name):
+        wd = self.app.wd
+        self.open_contacts_page()
+        self.select_contact_by_id(contact_id)
+        self.change_select_field_value("to_group", group_name)
+        wd.find_element_by_name("add").click()
+        self.return_group_page_with_contacts(group_name)
+        self.contact_cache = None
 #------------------------------------------------------
     def edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
@@ -75,6 +88,19 @@ class ContactHelper:
 
     def edit_first_contact(self, new_contact_data):
         self.edit_contact_by_index(0, new_contact_data)
+
+#15
+    def edit_contact_by_id(self, id, new_contact_data):
+        wd = self.app.wd
+        self.open_home_page()
+        # edit first contact
+        self.select_contact_by_id(id)
+        self.open_contact_to_edit_by_id(id)
+        self.fill_contact_form(new_contact_data)
+        # submit contact update
+        wd.find_element_by_name("update").click()
+        self.return_to_home_page()
+        self.contact_cache = None
 #--------------------------------------------------------------
 
     def delete_contact_by_index(self, index):
@@ -90,9 +116,28 @@ class ContactHelper:
         wd.find_element_by_css_selector("div.msgbox")
         # return to page contacts
         wd.find_element_by_link_text("home").click()
-
         self.contact_cache = None
 
+#15
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.open_home_page()
+        self.select_contact_by_id(id)
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        # return to page contacts
+        wd.find_element_by_link_text("home").click()
+        wd.implicitly_wait(2)
+        self.contact_cache = None
+#15
+    def del_contact_in_group(self, contact_id, group_id, group_name):
+        wd = self.app.wd
+        self.open_group_page_with_contacts(group_id)
+        self.select_contact_by_id(contact_id)
+        wd.find_element_by_name("remove").click()
+        self.return_group_page_with_contacts(group_name)
+        self.contact_cache = None
 
 #задание 7-1
     #def delete_first_contact(self):
@@ -119,12 +164,16 @@ class ContactHelper:
 #!!! 13
     def select_contact_by_index(self, index):
         wd = self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
-        #if index == 1:
-            #wd.find_element_by_xpath("//td/input").click()
-        #else:
-            #wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
+        #wd.find_elements_by_name("selected[]")[index].click()
+        if index == 1:
+            wd.find_element_by_xpath("//td/input").click()
+        else:
+            wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
 
+#15
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
     def select_first_contact(self):
         wd = self.app.wd
