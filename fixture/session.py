@@ -13,7 +13,9 @@ class SessionHelper:
         wd.find_element_by_name("user").send_keys(username)
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//input[@value='Login']").click()
+                #было до 5_04. Одинарные кавычки заменяют /
+        #wd.find_element_by_xpath("//input[@value='Login']").click()
+        wd.find_element_by_css_selector('input[type="submit"]').click()
 
     def ensure_login(self, username, password):
         #wd = self.app.wd
@@ -32,9 +34,19 @@ class SessionHelper:
         wd = self.app.wd
         return len(wd.find_elements_by_link_text("Logout")) > 0
 
+#"пользователь с именем Юзернейм залогинен в систему"
     def is_logged_in_as(self, username):
+        #было до 5_04:
+        #wd = self.app.wd
+        #return wd.find_element_by_xpath("//div/div[1]/form/b").text == "("+username+")"
         wd = self.app.wd
-        return wd.find_element_by_xpath("//div/div[1]/form/b").text == "("+username+")"
+        return self.get_logged_user() == username
+
+    def get_logged_user(self):
+        wd = self.app.wd
+        # 5_04 получить имя актуального юзера из барузера
+        # обраиляющие скобки...(username)
+        return wd.find_element_by_xpath("//div[@id='top']/form[@class='header']/b").text[1:-1]
 
     def ensure_logout(self):
         #wd = self.app.wd

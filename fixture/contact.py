@@ -167,10 +167,12 @@ class ContactHelper:
     def select_contact_by_index(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
-        #16if index == 1:
-            #16wd.find_element_by_xpath("//td/input").click()
-        #16else:
-            #16wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
+# 5_04 ниже - замена скобок
+        #if index == 1:
+            #wd.find_element_by_xpath("//td/input").click()
+        #else:
+#5_04 - замена скобок
+            #wd.find_element_by_xpath("//tr[%s]/td/input").click() % str(index+2)
 
 #15
     def select_contact_by_id(self, id):
