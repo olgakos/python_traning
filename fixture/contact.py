@@ -16,34 +16,7 @@ class ContactHelper:
         if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_link_text("Last name")) > 0):
              wd.find_element_by_link_text("home").click()
 
-# -----------------------------------------------------
 
-    def fill_contact_form(self, contact):
-        # fill new contact
-        self.change_field_value("firstname", contact.firstname)
-        #self.change_field_value("middlename", contact.middlename)
-        self.change_field_value("lastname", contact.lastname)
-        # fill in  phone numbers 5_05
-        self.change_field_value("secondaryphone", contact.secondaryphone)
-        self.change_field_value("homephone", contact.homephone)
-        self.change_field_value("mobilephone", contact.mobilephone)
-        self.change_field_value("workphone", contact.workphone)
-
-
-
-    def change_select_field_value(self, field_name, text):
-        wd = self.app.wd
-        if text is not None:
-            wd.find_element_by_name(field_name).click()
-            Select(wd.find_element_by_name(field_name)).select_by_visible_text(text)
-
-
-    def change_field_value(self, field_name, text):
-        wd = self.app.wd
-        if text is not None:
-            wd.find_element_by_name(field_name).click()
-            wd.find_element_by_name(field_name).clear()
-            wd.find_element_by_name(field_name).send_keys(text)
 
 #-----------------------------------------------------
     def create(self, contact):
@@ -59,21 +32,21 @@ class ContactHelper:
         self.return_to_home_page()
         self.contact_cache = None
 
-#15
-    def add_contact_in_group(self, contact_id, group_name):
-        wd = self.app.wd
-        self.open_contacts_page()
-        self.select_contact_by_id(contact_id)
-        self.change_select_field_value("to_group", group_name)
-        wd.find_element_by_name("add").click()
-        self.return_group_page_with_contacts(group_name)
-        self.contact_cache = None
+#141
+    #def add_contact_in_group(self, contact_id, group_name):
+        #wd = self.app.wd
+        #self.open_contacts_page()
+        #self.select_contact_by_id(contact_id)
+        #self.change_select_field_value("to_group", group_name)
+        #wd.find_element_by_name("add").click()
+        #self.return_group_page_with_contacts(group_name)
+        #self.contact_cache = None
 #------------------------------------------------------
     def edit_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.open_home_page()
         self.select_contact_by_index(index)
-        wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
+        #141wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]/a/img").click()
         # wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
         ##wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         self.fill_contact_form(new_contact_data)
@@ -95,11 +68,10 @@ class ContactHelper:
         #self.contact_cache = None
 
     def edit_first_contact(self, new_contact_data):
-        #self.edit_contact_by_index(0)
         self.edit_contact_by_index(0, new_contact_data)
 ##
 
-#15
+#141&&&
     def edit_contact_by_id(self, id, new_contact_data):
         wd = self.app.wd
         self.open_home_page()
@@ -181,7 +153,7 @@ class ContactHelper:
         #else:
 #5_04 - замена скобок
             #wd.find_element_by_xpath("//tr[%s]/td/input").click() % str(index+2)
-
+            #wd.find_element_by_xpath("//tr[" + str(index+2) + "]/td/input").click()
 #15
     def select_contact_by_id(self, id):
         wd = self.app.wd
@@ -199,10 +171,10 @@ class ContactHelper:
         # return contacts pages
         wd.find_element_by_link_text("home").click()
 
-    # 14!!
-    # def return_to_list_contacts_page(self):
-    # wd = self.app.wd
-    # wd.find_element_by_link_text("home page").click()
+    #то же самое что вренуться на home
+    #def return_to_list_contacts_page(self):
+        #wd = self.app.wd
+        #wd.find_element_by_link_text("home page").click()
 
 #лекц3_05
     def count(self):
@@ -215,6 +187,37 @@ class ContactHelper:
 #Unit 4_10
     contact_cache = None
 
+    # -----------------------------------------------------
+
+    def fill_contact_form(self, contact):
+        # fill new contact
+        self.change_field_value("firstname", contact.firstname)
+        # self.change_field_value("middlename", contact.middlename)
+        self.change_field_value("lastname", contact.lastname)
+        # fill in  phone numbers 5_05
+        self.change_field_value("homephone", contact.homephone)
+        self.change_field_value("mobilephone", contact.mobilephone)
+        self.change_field_value("workphone", contact.workphone)
+        self.change_field_value("secondaryphone", contact.secondaryphone)
+        # self.change_field_value("email", contact.email)
+        # self.change_field_value("email2", contact.email2)
+        # self.change_field_value("address", contact.address)
+
+    def change_select_field_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            Select(wd.find_element_by_name(field_name)).select_by_visible_text(text)
+
+    def change_field_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
+
+#----------------------------------------------
+
 #unit4_09+ (читает список с главной стр и загружает даные пока только про имя и фам
     def get_contact_list(self):
         if self.contact_cache is None:
@@ -226,11 +229,10 @@ class ContactHelper:
                   first_name = cells[1].text
                   last_name = cells[2].text
                   id = cells[0].find_element_by_tag_name("input").get_attribute("value")
-                  all_phones = cells[5].text.splitlines()
-                  #all_phones = cells[5].text
+                  #all_phones = cells[5].text.splitlines()
+                  all_phones = cells[5].text
                   self.contact_cache.append(Contact(firstname=first_name, lastname=last_name, id=id,
-                                                    homephone=all_phones[0], mobilephone=all_phones[1],
-                                                    workphone=all_phones[2], secondaryphone=all_phones[3]))
+                                                    all_phones_from_home_page=all_phones))
         return list(self.contact_cache)
 
     def open_contact_to_edit_by_index(self, index):
@@ -257,10 +259,9 @@ class ContactHelper:
         workphone = wd.find_element_by_name("work").get_attribute("value")
         mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
         secondaryphone = wd.find_element_by_name("phone2").get_attribute("value")
-        #address = wd.find_element_by_name("address").get_attribute("value")
         #email = wd.find_element_by_name("email").get_attribute("value")
         #email2 = wd.find_element_by_name("email2").get_attribute("value")
-        #email3 = wd.find_element_by_name("email3").get_attribute("value")
+        #address = wd.find_element_by_name("address").get_attribute("value")
         return Contact(firstname=firstname, lastname=lastname, id=id,
                        homephone=homephone, mobilephone=mobilephone, workphone=workphone, secondaryphone=secondaryphone)
                        #+address=address, email=email, email2=email2, email3=email3)
