@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
+#from sys import maxsize
 
 def test_add_contact(app):
     #unit4_09
